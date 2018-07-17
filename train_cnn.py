@@ -147,7 +147,7 @@ if __name__ == "__main__":
 
     # Get preprocessed training and validation data
     training_set, val_set = load_cifar10(
-        args.data_path, num_training=50, num_val=10)
+        args.data_path, num_training=50000, num_val=1000)
 
     X_train, y_train = training_set
     X_val, y_val= val_set
