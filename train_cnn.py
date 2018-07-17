@@ -17,7 +17,7 @@ import shutil
 
 
 # update for sgd momentum 
-def update(velocity, params, grads, learning_rate=0.01, mu=0.9):
+def update(velocity, params, grads, learning_rate=0.001, mu=0.9):
     for v, p, g, in zip(velocity, params, reversed(grads)):
         for i in range(len(g)):
             v[i] = mu * v[i] + learning_rate * g[i]
